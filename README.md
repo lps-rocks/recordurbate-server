@@ -1,12 +1,10 @@
 # Recordurbate-server
 
-Server for Recordurbate with Dockerfile 😃
-
-Use https://github.com/oliverjrose99/Recordurbate project, so build your docker image to get a new oliverjrose99's Recordurbate version 😃
+API Implementation of [Recordurbate](https://github.com/oliverjrose99/Recordurbate) with Docker
 
 ## API
 
-With docker-compose, run the service and call http://localhost:5599
+With docker-compose, run the service and call the API listening on port 5599
 
 - GET /streamers : to get the list of watching streamers
 - PUT /streamers/{name} : to add a streamer
@@ -22,7 +20,7 @@ version: '3.5'
 services:
   app:
     restart: unless-stopped
-    image: gallofeliz/recordurbate-server
+    image: ghcr.io/lps-rocks/recordurbate-server:latest
     volumes:
       - ./downloads:/app/videos
       - ./configs:/app/configs
@@ -47,6 +45,4 @@ services:
 
 ## UI
 
-You can design your own UI for that, or use curl, postman. I use node-red dashboard 😃
-
-![node-red dashboard illustration](node-ui-recordurbate.png "node-red dashboard illustration")
+You can design your own UI for that, or use curl, postman.
