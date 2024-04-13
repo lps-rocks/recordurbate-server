@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN apk add --no-cache ffmpeg curl tzdata && \
     pip install requests && \
-    curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl && \
+    curl -L https://github.com/yt-dlp/yt-dlp/releases/download/2024.04.09/yt-dlp_linux -o /usr/local/bin/youtube-dl && \
     chmod a+rx /usr/local/bin/youtube-dl && \
     curl https://codeload.github.com/oliverjrose99/Recordurbate/zip/master --output master.zip && \
     unzip master.zip ; mv Recordurbate-master/recordurbate/* .; rm -r Recordurbate-master && \
