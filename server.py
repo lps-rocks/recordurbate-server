@@ -13,10 +13,10 @@ import threading
 
 #processes = []
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.WARNING)
 out_hdlr = logging.StreamHandler(sys.stdout)
 out_hdlr.setFormatter(logging.Formatter('%(asctime)s %(message)s'))
-out_hdlr.setLevel(logging.DEBUG)
+out_hdlr.setLevel(logging.WARNING)
 logger.addHandler(out_hdlr)
 
 class BotThread(threading.Thread):
